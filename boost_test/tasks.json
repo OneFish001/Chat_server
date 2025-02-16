@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang++ 生成活动文件",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-g","-o",
+				"${file}",
+				//"${fileDirname}/${fileBasenameNoExtension}",
+				//"/Users/apple/Projects/work/chat_sever/boost_test/main", 
+				"${workspaceFolder}/boost_test/main",
+				"-std=c++17",
+				"-I/usr/local/boost_1_82_0", // Boost 头文件路径
+                "-L/usr/local/boost_1_82_0/lib", // Boost 库路径（如果已编译）
+				"-lboost_system"       // 链接 Boost.System 库
+
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译 Boost.Asio 程序"
+		}
+	]
+}
