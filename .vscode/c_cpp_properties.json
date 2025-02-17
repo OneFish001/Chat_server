@@ -4,6 +4,7 @@
             "name": "Mac",
             "includePath": [
                "/usr/local/boost_1_82_0", // Boost 头文件路径
+               "${workspaceFolder}/include",  // 包含头文件的目录
                 "${workspaceFolder}/**"
             ],
             "defines": [],

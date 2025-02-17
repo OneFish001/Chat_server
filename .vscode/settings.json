@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "cppdbg"
-    ]
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++"
 }

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/apple/Projects/work/chat_sever/build",
+  "command": "/usr/bin/clang++  -I/Users/apple/Projects/work/chat_sever/include -I/usr/local/boost_1_82_0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -o CMakeFiles/ChatServer.dir/src/ChatServer.o -c /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp",
+  "file": "/Users/apple/Projects/work/chat_sever/src/ChatServer.cpp",
+  "output": "CMakeFiles/ChatServer.dir/src/ChatServer.o"
+}
+]
