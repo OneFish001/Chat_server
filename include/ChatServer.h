@@ -2,6 +2,7 @@
 #include <boost/asio.hpp>
 #include <vector>
 #include <memory>
+#include <thread>
 
 using namespace boost::asio;
 using namespace boost::asio::ip;
@@ -9,7 +10,7 @@ using namespace boost::asio::ip;
 
 class ChatServer {
 public:
-    ChatServer(io_context& io_context,short port);
+    ChatServer(io_context& io_context,short port,int thread_pool_size);
     void start();
 
 private:
@@ -23,7 +24,8 @@ private:
    io_context& io_context_;
    tcp::acceptor acceptor_;
    std::vector<std::shared_ptr <tcp::socket> > clients;
-
+   std::mutex clients_mutex_; //保护clients_的互斥锁
+   int thread_pool_size_;//线程池大小
 
 
 

@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/apple/Projects/work/chat_sever/src/ChatServer.cpp" "CMakeFiles/ChatServer.dir/src/ChatServer.o" "gcc" "CMakeFiles/ChatServer.dir/src/ChatServer.o.d"
+  "/Users/apple/Projects/work/chat_sever/src/ChatServer.cpp" "CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o" "gcc" "CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o.d"
+  "/Users/apple/Projects/work/chat_sever/src/main.cpp" "CMakeFiles/ChatServer.dir/src/main.cpp.o" "gcc" "CMakeFiles/ChatServer.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

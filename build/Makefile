@@ -129,20 +129,53 @@ ChatServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/build
 .PHONY : ChatServer/fast
 
-# target to build an object file
-src/ChatServer.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/ChatServer.o
+src/ChatServer.o: src/ChatServer.cpp.o
 .PHONY : src/ChatServer.o
 
-# target to preprocess a source file
-src/ChatServer.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/ChatServer.i
+# target to build an object file
+src/ChatServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o
+.PHONY : src/ChatServer.cpp.o
+
+src/ChatServer.i: src/ChatServer.cpp.i
 .PHONY : src/ChatServer.i
 
-# target to generate assembly for a file
-src/ChatServer.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/ChatServer.s
+# target to preprocess a source file
+src/ChatServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/ChatServer.cpp.i
+.PHONY : src/ChatServer.cpp.i
+
+src/ChatServer.s: src/ChatServer.cpp.s
 .PHONY : src/ChatServer.s
+
+# target to generate assembly for a file
+src/ChatServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s
+.PHONY : src/ChatServer.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -156,6 +189,9 @@ help:
 	@echo "... src/ChatServer.o"
 	@echo "... src/ChatServer.i"
 	@echo "... src/ChatServer.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

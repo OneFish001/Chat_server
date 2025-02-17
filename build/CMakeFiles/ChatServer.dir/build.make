@@ -72,31 +72,47 @@ include CMakeFiles/ChatServer.dir/flags.make
 CMakeFiles/ChatServer.dir/codegen:
 .PHONY : CMakeFiles/ChatServer.dir/codegen
 
-CMakeFiles/ChatServer.dir/src/ChatServer.o: CMakeFiles/ChatServer.dir/flags.make
-CMakeFiles/ChatServer.dir/src/ChatServer.o: /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp
-CMakeFiles/ChatServer.dir/src/ChatServer.o: CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ChatServer.dir/src/ChatServer.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/src/ChatServer.o -MF CMakeFiles/ChatServer.dir/src/ChatServer.o.d -o CMakeFiles/ChatServer.dir/src/ChatServer.o -c /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp
+CMakeFiles/ChatServer.dir/src/main.cpp.o: CMakeFiles/ChatServer.dir/flags.make
+CMakeFiles/ChatServer.dir/src/main.cpp.o: /Users/apple/Projects/work/chat_sever/src/main.cpp
+CMakeFiles/ChatServer.dir/src/main.cpp.o: CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ChatServer.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/src/main.cpp.o -MF CMakeFiles/ChatServer.dir/src/main.cpp.o.d -o CMakeFiles/ChatServer.dir/src/main.cpp.o -c /Users/apple/Projects/work/chat_sever/src/main.cpp
 
-CMakeFiles/ChatServer.dir/src/ChatServer.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/src/ChatServer.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp > CMakeFiles/ChatServer.dir/src/ChatServer.i
+CMakeFiles/ChatServer.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Projects/work/chat_sever/src/main.cpp > CMakeFiles/ChatServer.dir/src/main.cpp.i
 
-CMakeFiles/ChatServer.dir/src/ChatServer.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/src/ChatServer.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp -o CMakeFiles/ChatServer.dir/src/ChatServer.s
+CMakeFiles/ChatServer.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Projects/work/chat_sever/src/main.cpp -o CMakeFiles/ChatServer.dir/src/main.cpp.s
+
+CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o: CMakeFiles/ChatServer.dir/flags.make
+CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o: /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp
+CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o: CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o -MF CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o.d -o CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o -c /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp
+
+CMakeFiles/ChatServer.dir/src/ChatServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/src/ChatServer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp > CMakeFiles/ChatServer.dir/src/ChatServer.cpp.i
+
+CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp -o CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s
 
 # Object files for target ChatServer
 ChatServer_OBJECTS = \
-"CMakeFiles/ChatServer.dir/src/ChatServer.o"
+"CMakeFiles/ChatServer.dir/src/main.cpp.o" \
+"CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o"
 
 # External object files for target ChatServer
 ChatServer_EXTERNAL_OBJECTS =
 
-ChatServer: CMakeFiles/ChatServer.dir/src/ChatServer.o
+ChatServer: CMakeFiles/ChatServer.dir/src/main.cpp.o
+ChatServer: CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o
 ChatServer: CMakeFiles/ChatServer.dir/build.make
 ChatServer: CMakeFiles/ChatServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ChatServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ChatServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChatServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

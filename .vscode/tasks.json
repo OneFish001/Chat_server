@@ -9,6 +9,7 @@
                 "-fansi-escape-codes",
                 "-g",
                 "${file}",
+                "-I/Users/apple/Projects/work/chat_sever/include",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

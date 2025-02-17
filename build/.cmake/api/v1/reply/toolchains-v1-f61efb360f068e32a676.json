@@ -5,7 +5,7 @@
 		{
 			"compiler" : 
 			{
-				"id" : "Clang",
+				"id" : "AppleClang",
 				"implicit" : 
 				{
 					"includeDirectories" : 
@@ -41,7 +41,7 @@
 		{
 			"compiler" : 
 			{
-				"id" : "Clang",
+				"id" : "AppleClang",
 				"implicit" : 
 				{
 					"includeDirectories" : 

@@ -1,8 +1,14 @@
 [
 {
   "directory": "/Users/apple/Projects/work/chat_sever/build",
-  "command": "/usr/bin/clang++  -I/Users/apple/Projects/work/chat_sever/include -I/usr/local/boost_1_82_0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -o CMakeFiles/ChatServer.dir/src/ChatServer.o -c /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/local/boost_1_82_0 -I/usr/local/boost_1_82_0/libs -I/usr/local/mysql-8.0.30-macos12-x86_64/include -I/usr/local/usr/local/boost_1_82_0/boost/include -I/Users/apple/Projects/work/chat_sever/../include -I/usr/local/boost_1_82_0/include -I/usr/local/boost_1_82_0/include -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -o CMakeFiles/ChatServer.dir/src/main.cpp.o -c /Users/apple/Projects/work/chat_sever/src/main.cpp",
+  "file": "/Users/apple/Projects/work/chat_sever/src/main.cpp",
+  "output": "CMakeFiles/ChatServer.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/apple/Projects/work/chat_sever/build",
+  "command": "/usr/bin/clang++  -I/usr/local/boost_1_82_0 -I/usr/local/boost_1_82_0/libs -I/usr/local/mysql-8.0.30-macos12-x86_64/include -I/usr/local/usr/local/boost_1_82_0/boost/include -I/Users/apple/Projects/work/chat_sever/../include -I/usr/local/boost_1_82_0/include -I/usr/local/boost_1_82_0/include -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -o CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o -c /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp",
   "file": "/Users/apple/Projects/work/chat_sever/src/ChatServer.cpp",
-  "output": "CMakeFiles/ChatServer.dir/src/ChatServer.o"
+  "output": "CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o"
 }
 ]

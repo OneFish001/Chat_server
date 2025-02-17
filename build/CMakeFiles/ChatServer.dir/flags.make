@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/apple/Projects/work/chat_sever/include
+CXX_INCLUDES = -I/usr/local/boost_1_82_0 -I/usr/local/boost_1_82_0/libs -I/usr/local/mysql-8.0.30-macos12-x86_64/include -I/usr/local/usr/local/boost_1_82_0/boost/include -I/Users/apple/Projects/work/chat_sever/../include -I/usr/local/boost_1_82_0/include
 
-CXX_FLAGS = -I/usr/local/boost_1_82_0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7
+CXX_FLAGS = -I/usr/local/boost_1_82_0/include -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7
 
