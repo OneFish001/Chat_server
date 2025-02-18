@@ -19,7 +19,17 @@ void ChatServer::start_accept(){
 
     //异步连接
     acceptor_.async_accept(*socket , [this,socket](const boost::system::error_code& error){
-        handle_accept(socket,error);
+        if(!error){
+            std::cout<<"Client connected on thread:"<<std::this_thread::get_id()<<std::endl;
+            // std::thread(handle_accept,socket).detach();  
+            std::thread([this,socket](){
+                boost::system::error_code error;  // 这里根据实际情况设置error
+                this->handle_accept(socket,error);}).detach();//启动新线程处理客户端
+        }else{
+            std::cout<<"异步连接出错："<<error.message()<<std::endl;
+        }
+        start_accept();
+           
     });
 
 }
@@ -39,7 +49,8 @@ void ChatServer::handle_accept(std::shared_ptr<tcp::socket> socket,const boost::
         start_read(socket);
 
         //继续等待下一个连接，循环
-        start_accept();}
+        // start_accept();
+    }
     else{
         std::cerr<<"连接错误！！！错误信息："<<error.message()<<"\n";
     }

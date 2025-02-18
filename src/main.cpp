@@ -4,7 +4,7 @@ int main(){
     try{
         boost::asio::io_context io_context;
         ChatServer server(io_context,8888,4);//设置四个线程
-        io_context.run();//启动事件循环
+        // io_context.run();//启动事件循环
         // std::cout<<"Success!"<<std::endl;
 
         //创建线程库
@@ -15,6 +15,8 @@ int main(){
 
             });
         }
+
+        
 
         //等待所有线程结束
         for(auto& t:threads){
