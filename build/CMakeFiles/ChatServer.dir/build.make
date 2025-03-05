@@ -100,19 +100,58 @@ CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Projects/work/chat_sever/src/ChatServer.cpp -o CMakeFiles/ChatServer.dir/src/ChatServer.cpp.s
 
+CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o: CMakeFiles/ChatServer.dir/flags.make
+CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o: /Users/apple/Projects/work/chat_sever/db_adapter/MySQLAdapter.cpp
+CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o: CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o -MF CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o.d -o CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o -c /Users/apple/Projects/work/chat_sever/db_adapter/MySQLAdapter.cpp
+
+CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Projects/work/chat_sever/db_adapter/MySQLAdapter.cpp > CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.i
+
+CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Projects/work/chat_sever/db_adapter/MySQLAdapter.cpp -o CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.s
+
+CMakeFiles/ChatServer.dir/log/Logger.cpp.o: CMakeFiles/ChatServer.dir/flags.make
+CMakeFiles/ChatServer.dir/log/Logger.cpp.o: /Users/apple/Projects/work/chat_sever/log/Logger.cpp
+CMakeFiles/ChatServer.dir/log/Logger.cpp.o: CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ChatServer.dir/log/Logger.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/log/Logger.cpp.o -MF CMakeFiles/ChatServer.dir/log/Logger.cpp.o.d -o CMakeFiles/ChatServer.dir/log/Logger.cpp.o -c /Users/apple/Projects/work/chat_sever/log/Logger.cpp
+
+CMakeFiles/ChatServer.dir/log/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/log/Logger.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Projects/work/chat_sever/log/Logger.cpp > CMakeFiles/ChatServer.dir/log/Logger.cpp.i
+
+CMakeFiles/ChatServer.dir/log/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/log/Logger.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Projects/work/chat_sever/log/Logger.cpp -o CMakeFiles/ChatServer.dir/log/Logger.cpp.s
+
 # Object files for target ChatServer
 ChatServer_OBJECTS = \
 "CMakeFiles/ChatServer.dir/src/main.cpp.o" \
-"CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o"
+"CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o" \
+"CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o" \
+"CMakeFiles/ChatServer.dir/log/Logger.cpp.o"
 
 # External object files for target ChatServer
 ChatServer_EXTERNAL_OBJECTS =
 
 ChatServer: CMakeFiles/ChatServer.dir/src/main.cpp.o
 ChatServer: CMakeFiles/ChatServer.dir/src/ChatServer.cpp.o
+ChatServer: CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o
+ChatServer: CMakeFiles/ChatServer.dir/log/Logger.cpp.o
 ChatServer: CMakeFiles/ChatServer.dir/build.make
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_log_setup.dylib
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_log.dylib
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_filesystem.dylib
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_thread.dylib
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_atomic.dylib
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_chrono.dylib
+ChatServer: /usr/local/boost_1_82_0/lib/libboost_regex.dylib
 ChatServer: CMakeFiles/ChatServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ChatServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/apple/Projects/work/chat_sever/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ChatServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChatServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

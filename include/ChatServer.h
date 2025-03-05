@@ -4,14 +4,20 @@
 #include <memory>
 #include <thread>
 
+#include "../db_adapter/ConnectionPool.h"
+#include "../log/logger.h"
+
 using namespace boost::asio;
 using namespace boost::asio::ip;
 
 
 class ChatServer {
+    // ConnectionPool db_pool_;//新增加连接池
+
 public:
     ChatServer(io_context& io_context,short port,int thread_pool_size);
     void start();
+    // void handleMessage(const std::string&meg);
 
 private:
    void start_accept();

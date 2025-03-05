@@ -28,15 +28,30 @@ include_directories(/usr/local//usr/local/boost_1_82_0/boost/include)
 link_directories(/usr/local//usr/local/boost_1_82_0/boost/lib)
 
 include_directories(${INCLUDE_DIR})
+
 # 包含 Boost 头文件目录
 include_directories(${Boost_INCLUDE_DIRS})
+
+# Boost.log
+find_package(Boost REQUIRED COMPONENTS log log_setup filesystem thread)
+include_directories(${BOOST_INCLUDEDIR})
 
 
 
 
 
 # 添加可执行文件
-add_executable(ChatServer ${SRC_DIR}/main.cpp ${SRC_DIR}/ChatServer.cpp)
+add_executable(ChatServer ${SRC_DIR}/main.cpp ${SRC_DIR}/ChatServer.cpp db_adapter/MySQLAdapter.cpp log/Logger.cpp)
+
+# 链接目标文件
+target_link_libraries(ChatServer 
+    ${Boost_LIBRARIES}
+    Boost::log
+    Boost::log_setup
+    Boost::filesystem
+    Boost::thread
+    pthread # Boost.Log 多线程依赖
+)
 
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})

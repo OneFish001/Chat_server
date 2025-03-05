@@ -1,10 +1,12 @@
-#include "ChatServer.h"
+#include "../include/ChatServer.h"
+#include "log/logger.h"
 
 
 
 ChatServer::ChatServer(io_context& io_context,short port,int thread_pool_size):
 io_context_(io_context),acceptor_(io_context,tcp::endpoint(tcp::v4(),port)),thread_pool_size_(thread_pool_size){
-    std::cout<<"服务器启动，开始监听端口："<<port<<"\n";
+     std::cout<<"服务器启动，开始监听端口："<<port<<"\n";
+    LOG_INFO<<"服务器启动，开始监听端口"<<port;
     start();
 
 }
@@ -12,6 +14,8 @@ io_context_(io_context),acceptor_(io_context,tcp::endpoint(tcp::v4(),port)),thre
 void ChatServer::start(){
     start_accept();
 }
+
+
 
 void ChatServer::start_accept(){
     //创建一个新的socket对象
@@ -27,6 +31,7 @@ void ChatServer::start_accept(){
                 this->handle_accept(socket,error);}).detach();//启动新线程处理客户端
         }else{
             std::cout<<"异步连接出错："<<error.message()<<std::endl;
+            LOG_ERROR<<"异步连接出错："<<error.message();
         }
         start_accept();
            
@@ -37,6 +42,7 @@ void ChatServer::start_accept(){
 void ChatServer::handle_accept(std::shared_ptr<tcp::socket> socket,const boost::system::error_code& error){
     if(!error){
         std::cout<<"有新的客户端连接："<<socket->remote_endpoint()<<"\n";
+        LOG_INFO<<"有新的客户端连接："<<socket->remote_endpoint();
 
         //将socket存入客户端列表
         //加锁保护
@@ -53,6 +59,7 @@ void ChatServer::handle_accept(std::shared_ptr<tcp::socket> socket,const boost::
     }
     else{
         std::cerr<<"连接错误！！！错误信息："<<error.message()<<"\n";
+        LOG_ERROR<<"连接错误！！！错误信息："<<error.message();
     }
 
 
@@ -72,6 +79,7 @@ void ChatServer::handle_read(std::shared_ptr<tcp::socket> socket,std::shared_ptr
     if(!error && bytes>0){
         std::string message(buffer->begin(),buffer->begin()+bytes);
         std::cout<<"收到消息："<<message<<"\n";
+        LOG_INFO<<"收到消息："<<message;
 
         //广播消息
         boardcast(message);
@@ -80,6 +88,7 @@ void ChatServer::handle_read(std::shared_ptr<tcp::socket> socket,std::shared_ptr
 
     }else{
         std::cout<<"读取错误！客户端断开："<<socket->remote_endpoint()<<"\n";
+        LOG_ERROR<<"读取错误！客户端断开："<<socket->remote_endpoint();
 
         //从客户端列表移除
         //加锁保护clients

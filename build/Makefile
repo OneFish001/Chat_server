@@ -129,6 +129,54 @@ ChatServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/build
 .PHONY : ChatServer/fast
 
+db_adapter/MySQLAdapter.o: db_adapter/MySQLAdapter.cpp.o
+.PHONY : db_adapter/MySQLAdapter.o
+
+# target to build an object file
+db_adapter/MySQLAdapter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.o
+.PHONY : db_adapter/MySQLAdapter.cpp.o
+
+db_adapter/MySQLAdapter.i: db_adapter/MySQLAdapter.cpp.i
+.PHONY : db_adapter/MySQLAdapter.i
+
+# target to preprocess a source file
+db_adapter/MySQLAdapter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.i
+.PHONY : db_adapter/MySQLAdapter.cpp.i
+
+db_adapter/MySQLAdapter.s: db_adapter/MySQLAdapter.cpp.s
+.PHONY : db_adapter/MySQLAdapter.s
+
+# target to generate assembly for a file
+db_adapter/MySQLAdapter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/db_adapter/MySQLAdapter.cpp.s
+.PHONY : db_adapter/MySQLAdapter.cpp.s
+
+log/Logger.o: log/Logger.cpp.o
+.PHONY : log/Logger.o
+
+# target to build an object file
+log/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/log/Logger.cpp.o
+.PHONY : log/Logger.cpp.o
+
+log/Logger.i: log/Logger.cpp.i
+.PHONY : log/Logger.i
+
+# target to preprocess a source file
+log/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/log/Logger.cpp.i
+.PHONY : log/Logger.cpp.i
+
+log/Logger.s: log/Logger.cpp.s
+.PHONY : log/Logger.s
+
+# target to generate assembly for a file
+log/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatServer.dir/build.make CMakeFiles/ChatServer.dir/log/Logger.cpp.s
+.PHONY : log/Logger.cpp.s
+
 src/ChatServer.o: src/ChatServer.cpp.o
 .PHONY : src/ChatServer.o
 
@@ -186,6 +234,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ChatServer"
+	@echo "... db_adapter/MySQLAdapter.o"
+	@echo "... db_adapter/MySQLAdapter.i"
+	@echo "... db_adapter/MySQLAdapter.s"
+	@echo "... log/Logger.o"
+	@echo "... log/Logger.i"
+	@echo "... log/Logger.s"
 	@echo "... src/ChatServer.o"
 	@echo "... src/ChatServer.i"
 	@echo "... src/ChatServer.s"
