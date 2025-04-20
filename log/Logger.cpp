@@ -38,6 +38,6 @@ void initLogger(){
     );
 
     //验证日志
-    LOG_INFO<<"Logger 初始化成功！！！！！！！！！！！！！";
+    LOG_INFO<<"Logger 初始化成功!!! ";
 
 }

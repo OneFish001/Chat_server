@@ -9,18 +9,26 @@ int main(){
     try{
         boost::asio::io_context io_context;
         ChatServer server(io_context,8888,4);//设置四个线程
-        // io_context.run();//启动事件循环
-        // std::cout<<"Success!"<<std::endl;
 
-        //数据库连接
-        // ConnectionPool pool;
+     
 
         auto &pool =ConnectionPool<MySQLAdapter>::getInstance();
         auto conn=pool.getConnection();
 
        
-        conn->execute("INSERT INTO logs VAlUES (...)");
-        pool.returnConnection(conn);
+        // conn->execute("INSERT INTO logs VAlUES (...)");
+        // pool.returnConnection(conn);
+        // 检查表结构是否存在
+        const char* checkTables = R"(
+            CREATE TABLE IF NOT EXISTS users (...);
+            CREATE TABLE IF NOT EXISTS messages (...);
+            CREATE TABLE IF NOT EXISTS user_status (...);
+        )";
+
+        if(!conn->execute(checkTables)) {
+            LOG_ERROR << "数据库表初始化失败";
+            return -1;
+        }
 
 
         //创建线程库

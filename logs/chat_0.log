@@ -1,0 +1,13 @@
+[2025-03-05 16:38:50.375507] <info> ------Logger 初始化成功!!! 
+[2025-03-05 16:38:50.377094] <info> ------服务器启动，开始监听端口8888
+[2025-03-05 16:38:50.385306] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385444] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385521] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385593] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385730] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385847] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385928] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.385996] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.386068] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.386179] <error> ------MySQL 连接失败!!!Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+[2025-03-05 16:38:50.386238] <error> ------Query 失败！！！Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)

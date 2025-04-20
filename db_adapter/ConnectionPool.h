@@ -10,6 +10,7 @@
 template<typename T>
 class ConnectionPool{
 
+
 public:
 
     static ConnectionPool& getInstance(){
@@ -26,10 +27,11 @@ public:
         std::unique_lock<std::mutex> lock(mtx_);
         if(pool_.empty()) {
             if(current_size_ < max_size_) {
-                auto conn = std::make_shared<T>();
-                conn->connect(confstr);
-                current_size_++;
-                return conn;
+                // auto conn = std::make_shared<T>();//从集群中选择节点
+                // conn->connect(confstr);//
+                // current_size_++;
+                auto conn=createNewConnection();
+                if(conn) return conn;
             }
             condition_.wait(lock, [this]{ return !pool_.empty(); });
         }
@@ -46,22 +48,39 @@ public:
     }
 
 private:
+    
+    ConnectionPool() : current_size_(0), max_size_(10) {
+    // 初始化连接池
+    for (int i = 0; i < max_size_; ++i) {
 
-                    ConnectionPool() : current_size_(0), max_size_(10) {
-                        // 初始化连接池
-                        for (int i = 0; i < max_size_; ++i) {
-                            auto conn = std::make_shared<T>();
-                            conn->connect(confstr);
-                            pool_.push(conn);
-                        }
-                    }
+        auto conn=createNewConnection();
+        if(conn) pool_.push(conn);
+}
 
-                    std::mutex mtx_;
-                    std::condition_variable condition_;
-                    int max_size_;
-                    int current_size_;
-                    std::queue<std::shared_ptr<DatabaseAdapter>> pool_;
-                    const std::string confstr = "mysql://user:password@localhost:3306/db";
+}
+
+std::shared_ptr<DatabaseAdapter> createNewConnection() {
+    std::string connStr = nodes_[current_node_];
+    current_node_ = (current_node_ + 1) % nodes_.size();
+    
+    auto conn = std::make_shared<T>();
+    if(conn->connect(connStr)) {
+        current_size_++;
+        return conn;
+    }
+    return nullptr; // 节点故障处理
+}
+
+    std::mutex mtx_;
+    std::condition_variable condition_;
+    int max_size_;
+    size_t current_node_=0;
+    std::queue<std::shared_ptr<DatabaseAdapter>> pool_;
+    std::vector<std::string>  nodes_={ "mysql://root:304474@node1:3306/db",
+        "mysql://root:304474@node2:3306/db"};
+   
+
+    int current_size_;
 
 
 };
